@@ -135,7 +135,7 @@ class PackageModel extends PackageEntity {
   final int startingPrice;
   final String thumbnail;
   final List<AmenityModel>? amenities;
-  final dynamic discount;
+  final DiscountModel? discount;
   final String durationText;
   final String loyaltyPointText;
   final String description;
@@ -155,7 +155,9 @@ class PackageModel extends PackageEntity {
             ? null
             : List<AmenityModel>.from(
                 json["amenities"].map((x) => AmenityModel.fromJson(x))),
-        discount: json["discount"],
+        discount: json["discount"] == null
+            ? null
+            : DiscountModel.fromJson(json["discount"]),
         durationText:
             json["durationText"] == null ? null : json["durationText"],
         loyaltyPointText:
@@ -171,7 +173,7 @@ class PackageModel extends PackageEntity {
         "amenities": amenities == null
             ? null
             : List<AmenityModel>.from(amenities!.map((x) => x.toJson())),
-        "discount": discount,
+        "discount": discount == null ? null : discount,
         "durationText": durationText == null ? null : durationText,
         "loyaltyPointText": loyaltyPointText == null ? null : loyaltyPointText,
         "description": description == null ? null : description,
@@ -200,5 +202,30 @@ class AmenityModel extends AmenityEntity {
   Map<String, dynamic> toJson() => {
         "title": title == null ? null : title,
         "icon": icon == null ? null : icon,
+      };
+}
+
+class DiscountModel extends DiscountEntity {
+  DiscountModel({
+    required this.title,
+    required this.amount,
+  }) : super(title: title, amount: amount);
+
+  final String title;
+  final int amount;
+
+  factory DiscountModel.fromRawJson(String str) =>
+      DiscountModel.fromJson(json.decode(str));
+
+  String toRawJson() => json.encode(toJson());
+
+  factory DiscountModel.fromJson(Map<String, dynamic> json) => DiscountModel(
+        title: json["title"] == null ? null : json["title"],
+        amount: json["amount"] == null ? null : json["amount"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "title": title == null ? null : title,
+        "amount": amount == null ? null : amount,
       };
 }

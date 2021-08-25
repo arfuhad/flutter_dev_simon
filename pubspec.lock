@@ -106,6 +106,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  dartz:
+    dependency: "direct main"
+    description:
+      name: dartz
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0"
   dbus:
     dependency: transitive
     description:
@@ -146,6 +153,27 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_basic_essentials:
+    dependency: "direct main"
+    description:
+      name: flutter_basic_essentials
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
+  flutter_easyloading:
+    dependency: "direct main"
+    description:
+      name: flutter_easyloading
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
+  flutter_spinkit:
+    dependency: transitive
+    description:
+      name: flutter_spinkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.0"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -163,6 +191,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.3.8"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   gql:
     dependency: transitive
     description:
@@ -380,6 +422,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.26.0"
+  shared_preferences:
+    dependency: "direct main"
+    description:
+      name: shared_preferences
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.7"
+  shared_preferences_linux:
+    dependency: transitive
+    description:
+      name: shared_preferences_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  shared_preferences_macos:
+    dependency: transitive
+    description:
+      name: shared_preferences_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  shared_preferences_platform_interface:
+    dependency: transitive
+    description:
+      name: shared_preferences_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
+  shared_preferences_web:
+    dependency: transitive
+    description:
+      name: shared_preferences_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  shared_preferences_windows:
+    dependency: transitive
+    description:
+      name: shared_preferences_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
   sky_engine:
     dependency: transitive
     description: flutter

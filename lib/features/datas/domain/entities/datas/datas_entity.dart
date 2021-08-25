@@ -68,7 +68,7 @@ class PackageEntity extends Equatable {
   final int startingPrice;
   final String thumbnail;
   final List<AmenityEntity>? amenities;
-  final dynamic discount;
+  final DiscountEntity? discount;
   final String durationText;
   final String loyaltyPointText;
   final String description;
@@ -82,8 +82,7 @@ class PackageEntity extends Equatable {
         this.amenities,
         this.discount,
         this.durationText,
-        this,
-        loyaltyPointText,
+        this.loyaltyPointText,
         this.description
       ];
 }
@@ -99,4 +98,17 @@ class AmenityEntity extends Equatable {
 
   @override
   List<Object?> get props => [this.title, this.icon];
+}
+
+class DiscountEntity extends Equatable {
+  DiscountEntity({
+    required this.title,
+    required this.amount,
+  });
+
+  final String title;
+  final int amount;
+
+  @override
+  List<Object?> get props => [this.title, this.amount];
 }
